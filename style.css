@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --border-radius: 20px;
+  font-size: 16px;
+}
+
+* {
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-bg);
+}
+
+div.card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  top: 50%;
+  left: 50%;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  transform: translate(-50%, -50%);
+  background-color: var(--card-bg);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+div.card > img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+div.card > h1 {
+  color: var(--white);
+}
+
+div.card > p {
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: var(--soft-blue);
+}
+
+div.card span.pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+div.card span.pricing .price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--cyan);
+}
+
+div.card span.pricing .time-left {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  gap: 0.5rem;
+  color: var(--soft-blue);
+}
+
+div.card hr {
+  border: none;
+  width: 100%;
+  height: 1px;
+  background-color: var(--line);
+}
+
+div.card div.footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+div.footer img {
+  width: 50px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+div.footer p {
+  color: var(--soft-blue);
+}
+
+div.footer p span {
+  color: var(--white);
+}
